@@ -1,0 +1,17 @@
+    <html lang="en">
+    <head>
+        {{ 'base.css' | asset_url | stylesheet_tag}}
+        {% comment %} <link rel="stylesheet" href="{{ 'base.css' | asset_url }}"/> {% endcomment %}
+        {{ content_for_header }}
+
+    </head>
+    <body>
+        <h1 class="test">conan gray</h1>
+        {% render 'header' %}
+
+        {{ content_for_layout }}
+
+        <script src="{{ 'script.js' | asset_url }}" defer></script>
+
+    </body>
+    </html>

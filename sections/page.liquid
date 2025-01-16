@@ -1,0 +1,9 @@
+<h2>{{collections['summer-collection'].title}}</h2>
+{% for product in collections['summer-collection'].products %}
+    <a href="{{ product.url }}">
+        <img src="{{ product | image_url: width: 400}}"/>
+        <h2>{{ product.title }}</h2>
+        <div>{{ product.price | money }}</div>
+     </a>
+    {% comment %} {{- product.title | link_to: product.url }} {% endcomment %}
+  {% endfor %}
